@@ -4,7 +4,7 @@
       <div class="title" @click="onJump(item)">{{item.title}}</div>
       <div class="info">
         <span class="name">{{item.author}}</span>
-        <span class="date">{{$day(item.createtime).format('YYYY年MM月DD日')}}</span>
+        <span class="date">{{$day(item.updatedAt).format('YYYY年MM月DD日 HH:mm:ss')}}</span>
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@ export default {
       this.$router.push({
         path: '/detail',
         query: {
-          id: item.id
+          id: item._id
         }
       })
     }

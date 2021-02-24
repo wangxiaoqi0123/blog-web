@@ -63,7 +63,7 @@ export default {
     },
     async delBlog(item) {
       this.loading = true
-      const res = await BlogServer.del({ id: item.id })
+      const res = await BlogServer.del({ id: item._id })
       this.loading = false
       let { message, errno } = res
       if (errno === 0) {
@@ -85,7 +85,7 @@ export default {
       this.$router.push({
         path: '/detail',
         query: {
-          id: item.id
+          id: item._id
         }
       })
     },
@@ -96,7 +96,7 @@ export default {
       this.$router.push({
         path: '/add',
         query: {
-          id: item.id
+          id: item._id
         }
       })
     }

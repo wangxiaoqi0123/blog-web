@@ -4,7 +4,7 @@
       <div class="title">{{formData.title}}</div>
       <div class="info">
         <span class="name">{{formData.author}}</span>
-        <span class="date">{{$day(formData.createtime).format('YYYY年MM月DD日')}}</span>
+        <span class="date">{{$day(formData.updatedAt).format('YYYY年MM月DD日')}}</span>
       </div>
     </div>
 
